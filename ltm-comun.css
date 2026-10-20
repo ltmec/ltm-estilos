@@ -384,7 +384,7 @@
    En GHL: sección con Custom Class lw-pagina (sin relleno, ancho completo) y adentro un Custom Code con <div class="lw-p">…</div>.
    Cabecera: sección lw-cab con el bloque de cabecera (sección universal "LTM · Cabecera"). */
 .lw-pagina.c-section, .lw-cab.c-section { padding: 0 !important; margin: 0 !important; background: #fff !important; }
-:is(.lw-pagina, .lw-cab) :is(.c-row, .c-column, .c-row > .inner, .c-column > .inner, .c-custom-code, .c-custom-code > div) { padding: 0 !important; margin: 0 !important; max-width: none !important; width: 100% !important; }
+:is(.lw-pagina, .lw-cab):is(#ltm-x, .c-section) > .inner, :is(.lw-pagina, .lw-cab):is(#ltm-x, .c-section) :is(.c-row, .c-column, .c-row > .inner, .c-column > .inner, .c-custom-code, .c-custom-code > div) { padding: 0 !important; margin: 0 !important; max-width: none !important; width: 100% !important; }
 .lw-p { --lw-linea:#E3E9EF; --lw-suave:#5B6673; --lw-claro:#F4F8FB; font-family: "Hanken Grotesk", system-ui, sans-serif; color: var(--ltm-piz); line-height: 1.55; -webkit-font-smoothing: antialiased; text-align: left; }
 .lw-p *, .lw-p *::before, .lw-p *::after { box-sizing: border-box; }
 .lw-p :is(h1, h2, h3, p, ol, ul, li, figure) { margin: 0; padding: 0; }
@@ -488,3 +488,30 @@
 .ltm-osc :is(.ltm-kick, .ltm-h1, .ltm-sub, .ltm-form-t, .ltm-form-s, .ltm-form-wa, .ltm-form-pie) { padding-top: 0 !important; padding-bottom: 0 !important; }
 .ltm-osc :is(.ltm-kick, .ltm-h1, .ltm-sub, .ltm-form-t, .ltm-form-s, .ltm-form-wa, .ltm-form-pie) :is(p, h1, h2, h3, h4, h5, h6) { margin: 0 !important; padding: 0 !important; }
 @media (max-width: 767px) { .ltm-osc .c-column.ltm-form-col { padding: 24px !important; } }
+
+/* ===== Web · Cabecera nativa (sección universal "LTM · Cabecera") =====
+   Sección: ltm-cab · Fila de 2 columnas · Izquierda: Image (logo) · Derecha: Nav Menu + Button. :is(#ltm-x, …) sube la especificidad para ganarle a los estilos por ID de GHL. */
+.ltm-cab:is(#ltm-x, .c-section) { background: #fff !important; padding: 0 !important; border-bottom: 1px solid #E3E9EF; position: relative; z-index: 30; }
+.ltm-cab:is(#ltm-x, .c-section) > .inner { max-width: none !important; padding: 0 !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-row { padding: 0 !important; margin: 0 !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-row > .inner { width: min(1180px, calc(100% - 32px)) !important; max-width: none !important; margin: 0 auto !important; padding: 0 !important; display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; align-items: center !important; justify-content: space-between !important; gap: 24px; min-height: 76px; }
+.ltm-cab:is(#ltm-x, .c-section) .c-column { padding: 0 !important; margin: 0 !important; width: auto !important; flex: 0 0 auto !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-column:last-child { flex: 1 1 auto !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-column > .inner { padding: 0 !important; display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; align-items: center !important; justify-content: flex-start; gap: 28px; }
+.ltm-cab:is(#ltm-x, .c-section) .c-column:last-child > .inner { justify-content: flex-end !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-image, .ltm-cab:is(#ltm-x, .c-section) .c-image .image-container, .ltm-cab:is(#ltm-x, .c-section) .c-image .image-container > div { padding: 0 !important; margin: 0 !important; width: auto !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-image img { display: block !important; height: 40px !important; width: auto !important; max-width: none !important; margin: 0 !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-nav-menu-v2 { padding: 0 !important; margin: 0 !important; width: auto !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-nav-menu-v2 .menu-item-title { font-family: "Hanken Grotesk", system-ui, sans-serif !important; font-weight: 600 !important; font-size: 16px !important; color: var(--ltm-piz) !important; padding: 8px 4px !important; background: transparent !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-nav-menu-v2 .menu-item a:hover .menu-item-title { color: #0079A6 !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-nav-menu-v2 .nav-menu-desktop { gap: 20px; }
+.ltm-cab:is(#ltm-x, .c-section) .c-button { padding: 0 !important; margin: 0 !important; width: auto !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-button a { display: inline-flex !important; align-items: center !important; justify-content: center !important; height: 46px !important; min-height: 0 !important; padding: 0 20px !important; border: 0 !important; border-radius: 999px !important; background: var(--ltm-cel-btn) !important; box-shadow: none !important; transition: background .2s; }
+.ltm-cab:is(#ltm-x, .c-section) .c-button a:hover { background: var(--ltm-cel-btn-h) !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-button a * { font-family: "Hanken Grotesk", system-ui, sans-serif !important; font-weight: 700 !important; font-size: 16px !important; color: #fff !important; }
+@media (max-width: 767px) {
+  .ltm-cab:is(#ltm-x, .c-section) .c-row > .inner { min-height: 64px; gap: 12px; }
+  .ltm-cab:is(#ltm-x, .c-section) .c-column > .inner { gap: 10px; }
+  .ltm-cab:is(#ltm-x, .c-section) .c-image img { height: 32px !important; }
+  .ltm-cab:is(#ltm-x, .c-section) .c-button { display: none !important; }
+}
