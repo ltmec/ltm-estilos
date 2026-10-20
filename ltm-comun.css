@@ -570,3 +570,13 @@
 .ltm-form-col:is(#ltm-x, .c-column) .c-form .form-builder--item { margin-bottom: 18px !important; }
 /* Margen lateral de 16 px en las secciones nativas cuando la pantalla es más angosta que el contenido */
 :is(.ltm-cla, .ltm-sec, .ltm-osc).c-section > .inner { width: min(1170px, calc(100% - 32px)) !important; max-width: none !important; margin-left: auto !important; margin-right: auto !important; }
+/* Formulario de la web, ajuste final para que se vea como el de la landing: campos blancos con borde fino, sin el relleno interno de GHL */
+.ltm-form-col:is(#ltm-x, .c-column) .c-form :is(#_builder-form, .form-builder--wrap) { padding: 0 !important; max-width: none !important; background: transparent !important; }
+.ltm-form-col:is(#ltm-x, .c-column) .c-form :is(.ghl-form-wrap, .field-container, .cform-YcdpXN_sba) { max-width: none !important; }
+.ltm-form-col:is(#ltm-x, .c-column) .c-form > div { padding: 0 !important; }
+.ltm-form-col:is(#ltm-x, .c-column) .c-form :is(.form-control, .countryphone, .multiselect__tags) { background: #fff !important; border: 1px solid #D5DDE5 !important; border-radius: 8px !important; min-height: 50px !important; padding-top: 10px !important; padding-bottom: 10px !important; box-shadow: none !important; font-size: 16px !important; color: var(--ltm-piz) !important; transition: border-color .2s, box-shadow .2s !important; }
+.ltm-form-col:is(#ltm-x, .c-column) .c-form textarea.form-control { min-height: 84px !important; }
+.ltm-form-col:is(#ltm-x, .c-column) .c-form :is(.form-control, .countryphone):focus, .ltm-form-col:is(#ltm-x, .c-column) .c-form .multiselect--active .multiselect__tags { border-color: var(--ltm-cel) !important; box-shadow: 0 0 0 3px rgba(0,174,234,.2) !important; outline: 0 !important; }
+.ltm-form-col:is(#ltm-x, .c-column) .c-form :is(.form-control, .countryphone, textarea)::placeholder, .ltm-form-col:is(#ltm-x, .c-column) .c-form .multiselect__placeholder { color: #6B7785 !important; font-size: 16px !important; font-family: "Hanken Grotesk", system-ui, sans-serif !important; }
+.ltm-form-col:is(#ltm-x, .c-column) .c-form .form-builder--item { margin-bottom: 14px !important; }
+.ltm-form-col:is(#ltm-x, .c-column) .c-form :is(label, .field-label) { margin-bottom: 6px !important; }
