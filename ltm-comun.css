@@ -506,7 +506,7 @@
 .ltm-cab:is(#ltm-x, .c-section) .c-nav-menu-v2 .menu-item-title { font-family: "Hanken Grotesk", system-ui, sans-serif !important; font-weight: 600 !important; font-size: 16px !important; color: var(--ltm-piz) !important; padding: 8px 4px !important; background: transparent !important; }
 .ltm-cab:is(#ltm-x, .c-section) .c-nav-menu-v2 .menu-item a:hover .menu-item-title { color: #0079A6 !important; }
 .ltm-cab:is(#ltm-x, .c-section) .c-nav-menu-v2 .nav-menu-desktop { gap: 20px; }
-.ltm-cab:is(#ltm-x, .c-section) .c-button { padding: 0 !important; margin: 0 !important; width: auto !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-button { padding: 0 !important; margin: 0 !important; width: auto !important; flex: 0 0 auto !important; }
 .ltm-cab:is(#ltm-x, .c-section) .c-button a { display: inline-flex !important; align-items: center !important; justify-content: center !important; height: 46px !important; min-height: 0 !important; padding: 0 20px !important; border: 0 !important; border-radius: 999px !important; background: var(--ltm-cel-btn) !important; box-shadow: none !important; transition: background .2s; }
 .ltm-cab:is(#ltm-x, .c-section) .c-button a:hover { background: var(--ltm-cel-btn-h) !important; }
 .ltm-cab:is(#ltm-x, .c-section) .c-button a * { font-family: "Hanken Grotesk", system-ui, sans-serif !important; font-weight: 700 !important; font-size: 16px !important; color: #fff !important; }
