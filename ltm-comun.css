@@ -580,3 +580,5 @@
 .ltm-form-col:is(#ltm-x, .c-column) .c-form :is(.form-control, .countryphone, textarea)::placeholder, .ltm-form-col:is(#ltm-x, .c-column) .c-form .multiselect__placeholder { color: #6B7785 !important; font-size: 16px !important; font-family: "Hanken Grotesk", system-ui, sans-serif !important; }
 .ltm-form-col:is(#ltm-x, .c-column) .c-form .form-builder--item { margin-bottom: 14px !important; }
 .ltm-form-col:is(#ltm-x, .c-column) .c-form :is(label, .field-label) { margin-bottom: 6px !important; }
+.ltm-form-col:is(#ltm-x, .c-column) .c-form input:is(#ltm-y, .form-control) { border-color: #D5DDE5 !important; }
+.ltm-form-col:is(#ltm-x, .c-column) .c-form input:is(#ltm-y, .form-control):focus { border-color: var(--ltm-cel) !important; }
