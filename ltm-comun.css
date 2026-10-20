@@ -41,15 +41,15 @@
 
 
 /* Formulario nativo de GHL (Custom Class del elemento Form: ltm-form) */
-.ltm-form, .ltm-form-col .c-form, .ltm-form label, .ltm-form-col .c-form label, .ltm-form input, .ltm-form-col .c-form input, .ltm-form textarea, .ltm-form-col .c-form textarea, .ltm-form .multiselect, .ltm-form-col .c-form .multiselect { font-family: "Hanken Grotesk", system-ui, sans-serif !important; }
-.ltm-form #_builder-form, .ltm-form-col .c-form #_builder-form { background: transparent !important; }
-.ltm-form label, .ltm-form-col .c-form label, .ltm-form .field-label, .ltm-form-col .c-form .field-label { font-size: 13px !important; font-weight: 600 !important; color: #5B6673 !important; margin-bottom: 5px !important; }
-.ltm-form .form-control, .ltm-form-col .c-form .form-control, .ltm-form .countryphone, .ltm-form-col .c-form .countryphone, .ltm-form .multiselect__tags, .ltm-form-col .c-form .multiselect__tags { background: #F4F8FB !important; border: 1px solid #E3E9EF !important; border-radius: 12px !important; min-height: 50px !important; font-size: 16px !important; color: var(--ltm-piz) !important; box-shadow: none !important; }
-.ltm-form .form-control:focus, .ltm-form-col .c-form .form-control:focus, .ltm-form .countryphone:focus, .ltm-form-col .c-form .countryphone:focus, .ltm-form .multiselect--active .multiselect__tags, .ltm-form-col .c-form .multiselect--active .multiselect__tags { border-color: var(--ltm-cel) !important; outline: 3px solid rgba(0,174,234,.25) !important; outline-offset: 0; }
-.ltm-form textarea.form-control, .ltm-form-col .c-form textarea.form-control { min-height: 84px !important; }
-.ltm-form .button-element, .ltm-form-col .c-form .button-element { background: var(--ltm-piz) !important; border: 0 !important; border-radius: 999px !important; min-height: 56px !important; padding: 0 26px !important; box-shadow: none !important; transition: transform .2s ease, background-color .2s ease; }
-.ltm-form .button-element:hover, .ltm-form-col .c-form .button-element:hover { background: #1E242D !important; transform: translateY(-2px); }
-.ltm-form .button-element, .ltm-form-col .c-form .button-element, .ltm-form .button-element *, .ltm-form-col .c-form .button-element * { color: #fff !important; font-family: "Hanken Grotesk", system-ui, sans-serif !important; font-size: 19px !important; font-weight: 700 !important; }
+.ltm-form, .ltm-form-col:is(#ltm-x, .c-column) .c-form, .ltm-form label, .ltm-form-col:is(#ltm-x, .c-column) .c-form label, .ltm-form input, .ltm-form-col:is(#ltm-x, .c-column) .c-form input, .ltm-form textarea, .ltm-form-col:is(#ltm-x, .c-column) .c-form textarea, .ltm-form .multiselect, .ltm-form-col:is(#ltm-x, .c-column) .c-form .multiselect { font-family: "Hanken Grotesk", system-ui, sans-serif !important; }
+.ltm-form #_builder-form, .ltm-form-col:is(#ltm-x, .c-column) .c-form #_builder-form { background: transparent !important; }
+.ltm-form label, .ltm-form-col:is(#ltm-x, .c-column) .c-form label, .ltm-form .field-label, .ltm-form-col:is(#ltm-x, .c-column) .c-form .field-label { font-size: 13px !important; font-weight: 600 !important; color: #5B6673 !important; margin-bottom: 5px !important; }
+.ltm-form .form-control, .ltm-form-col:is(#ltm-x, .c-column) .c-form .form-control, .ltm-form .countryphone, .ltm-form-col:is(#ltm-x, .c-column) .c-form .countryphone, .ltm-form .multiselect__tags, .ltm-form-col:is(#ltm-x, .c-column) .c-form .multiselect__tags { background: #F4F8FB !important; border: 1px solid #E3E9EF !important; border-radius: 12px !important; min-height: 50px !important; font-size: 16px !important; color: var(--ltm-piz) !important; box-shadow: none !important; }
+.ltm-form .form-control:focus, .ltm-form-col:is(#ltm-x, .c-column) .c-form .form-control:focus, .ltm-form .countryphone:focus, .ltm-form-col:is(#ltm-x, .c-column) .c-form .countryphone:focus, .ltm-form .multiselect--active .multiselect__tags, .ltm-form-col:is(#ltm-x, .c-column) .c-form .multiselect--active .multiselect__tags { border-color: var(--ltm-cel) !important; outline: 3px solid rgba(0,174,234,.25) !important; outline-offset: 0; }
+.ltm-form textarea.form-control, .ltm-form-col:is(#ltm-x, .c-column) .c-form textarea.form-control { min-height: 84px !important; }
+.ltm-form .button-element, .ltm-form-col:is(#ltm-x, .c-column) .c-form .button-element { background: var(--ltm-piz) !important; border: 0 !important; border-radius: 999px !important; min-height: 56px !important; padding: 0 26px !important; box-shadow: none !important; transition: transform .2s ease, background-color .2s ease; }
+.ltm-form .button-element:hover, .ltm-form-col:is(#ltm-x, .c-column) .c-form .button-element:hover { background: #1E242D !important; transform: translateY(-2px); }
+.ltm-form .button-element, .ltm-form-col:is(#ltm-x, .c-column) .c-form .button-element, .ltm-form .button-element *, .ltm-form-col:is(#ltm-x, .c-column) .c-form .button-element * { color: #fff !important; font-family: "Hanken Grotesk", system-ui, sans-serif !important; font-size: 19px !important; font-weight: 700 !important; }
 
 
 /* Columnas de la primera pantalla: izquierda más ancha, 64 px de separación, alineadas arriba (solo computadora y tableta) */
@@ -568,3 +568,5 @@
 .ltm-form-col:is(#ltm-x, .c-column) .c-form .button-element { width: 100% !important; background: var(--ltm-piz) !important; border: 0 !important; border-radius: 999px !important; min-height: 56px !important; box-shadow: none !important; }
 .ltm-form-col:is(#ltm-x, .c-column) .c-form .button-element, .ltm-form-col:is(#ltm-x, .c-column) .c-form .button-element * { color: #fff !important; font-family: "Hanken Grotesk", system-ui, sans-serif !important; font-size: 19px !important; font-weight: 700 !important; }
 .ltm-form-col:is(#ltm-x, .c-column) .c-form .form-builder--item { margin-bottom: 18px !important; }
+/* Margen lateral de 16 px en las secciones nativas cuando la pantalla es más angosta que el contenido */
+:is(.ltm-cla, .ltm-sec, .ltm-osc).c-section > .inner { width: min(1170px, calc(100% - 32px)) !important; max-width: none !important; margin-left: auto !important; margin-right: auto !important; }
