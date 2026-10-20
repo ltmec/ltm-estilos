@@ -1,0 +1,9 @@
+{
+  "headers": [
+    { "source": "/(.*)\\.css", "headers": [
+      { "key": "Cache-Control", "value": "public, max-age=600, stale-while-revalidate=86400" },
+      { "key": "Access-Control-Allow-Origin", "value": "*" },
+      { "key": "Content-Type", "value": "text/css; charset=utf-8" }
+    ] }
+  ]
+}
