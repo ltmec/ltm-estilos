@@ -501,7 +501,8 @@
 .ltm-cab:is(#ltm-x, .c-section) .c-column:last-child > .inner { justify-content: flex-end !important; }
 .ltm-cab:is(#ltm-x, .c-section) .c-image, .ltm-cab:is(#ltm-x, .c-section) .c-image .image-container, .ltm-cab:is(#ltm-x, .c-section) .c-image .image-container > div { padding: 0 !important; margin: 0 !important; width: auto !important; }
 .ltm-cab:is(#ltm-x, .c-section) .c-image img { display: block !important; height: 40px !important; width: auto !important; max-width: none !important; margin: 0 !important; }
-.ltm-cab:is(#ltm-x, .c-section) .c-nav-menu-v2 { padding: 0 !important; margin: 0 !important; width: auto !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-nav-menu-v2 { padding: 0 !important; margin: 0 0 0 auto !important; width: auto !important; flex: 0 0 auto !important; }
+.ltm-cab:is(#ltm-x, .c-section) .c-nav-menu-v2 .mega-menu-container { width: auto !important; }
 .ltm-cab:is(#ltm-x, .c-section) .c-nav-menu-v2 .menu-item-title { font-family: "Hanken Grotesk", system-ui, sans-serif !important; font-weight: 600 !important; font-size: 16px !important; color: var(--ltm-piz) !important; padding: 8px 4px !important; background: transparent !important; }
 .ltm-cab:is(#ltm-x, .c-section) .c-nav-menu-v2 .menu-item a:hover .menu-item-title { color: #0079A6 !important; }
 .ltm-cab:is(#ltm-x, .c-section) .c-nav-menu-v2 .nav-menu-desktop { gap: 20px; }
