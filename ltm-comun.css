@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Latinmanagers · CSS común v2.1 · https://estilos.ltmec.com/ltm-comun.css
+/* Latinmanagers · CSS común v2.2 · https://estilos.ltmec.com/ltm-comun.css
    Lo cargan la landing, la web y el blog de GHL. Solo afecta a elementos con clases ltm-*, lc-*, lp-*, le-*, lw-* (web).
    Fuente: Web y landings - LTM/estilos/ltm-comun.css (se publica en el proyecto ltm-estilos de Vercel). */
 :root { --ltm-cel:#00AEEA; --ltm-cel-btn:#0090C8; --ltm-cel-btn-h:#007DB0; --ltm-gris:#686867; --ltm-piz:#29313D; --ltm-piz2:#323C4A; --ltm-piz3:#3D4858; --ltm-suave-osc:#C8D3DE; --ltm-wa:#25D366; --ltm-wa-h:#128C7E; }
