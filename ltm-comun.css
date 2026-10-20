@@ -440,6 +440,7 @@
 .lw-pasos p { color: var(--lw-suave); font-size: 15px; }
 /* Casos dentro de la web */
 .lw-casos { margin-top: 20px; }
+.lw-p .lc-reto { margin-top: 14px; } .lw-p .lc-flujo-t { margin-top: 24px; } .lw-p .lc-flujo { margin-top: 12px; }
 /* Preguntas frecuentes */
 .lw-faq { max-width: 860px; margin-top: 36px; border-top: 1px solid var(--lw-linea); }
 .lw-faq details { border-bottom: 1px solid var(--lw-linea); }
