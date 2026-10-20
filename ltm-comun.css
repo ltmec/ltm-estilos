@@ -420,7 +420,7 @@
 .lw-srv a { display: flex; flex-direction: column; gap: 12px; background: var(--ltm-piz); color: #fff; border-radius: 26px; padding: 30px; min-height: 300px; position: relative; overflow: hidden; isolation: isolate; transition: transform .3s ease; }
 .lw-srv a:hover { transform: translateY(-4px); }
 .lw-srv a::after { content: ""; position: absolute; z-index: -1; right: -90px; bottom: -90px; width: 260px; height: 260px; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,174,234,.35), rgba(0,174,234,0)); }
-.lw-srv .lw-n { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ltm-cel); }
+.lw-srv .lw-n { font-size: 15px; font-weight: 600; color: var(--ltm-cel); }
 .lw-srv h3 { font-family: "Archivo", "Arial Narrow", sans-serif; font-stretch: 80%; font-weight: 800; font-size: clamp(26px, 2.6vw, 34px); line-height: 1; color: #fff; }
 .lw-srv p { color: var(--ltm-suave-osc); font-size: 16px; }
 .lw-ir { font-weight: 700; color: inherit; white-space: nowrap; }
@@ -428,7 +428,7 @@
 .lw-srv .lw-ir { margin-top: auto; color: #fff; }
 .lw-comp { margin-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border: 1px solid var(--lw-linea); border-radius: 22px; padding: 22px 26px; color: var(--ltm-piz) !important; background: #fff; transition: border-color .2s; }
 .lw-comp:hover { border-color: var(--ltm-cel); }
-.lw-comp small { display: block; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--lw-suave); }
+.lw-comp small { display: block; font-size: 15px; font-weight: 600; color: #0079A6; margin-bottom: 2px; }
 .lw-comp b { font-size: 19px; }
 .lw-comp span:not(.lw-ir) { display: block; color: var(--lw-suave); font-size: 15px; }
 /* Pasos */
