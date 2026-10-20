@@ -41,15 +41,15 @@
 
 
 /* Formulario nativo de GHL (Custom Class del elemento Form: ltm-form) */
-.ltm-form, .ltm-form label, .ltm-form input, .ltm-form textarea, .ltm-form .multiselect { font-family: "Hanken Grotesk", system-ui, sans-serif !important; }
-.ltm-form #_builder-form { background: transparent !important; }
-.ltm-form label, .ltm-form .field-label { font-size: 13px !important; font-weight: 600 !important; color: #5B6673 !important; margin-bottom: 5px !important; }
-.ltm-form .form-control, .ltm-form .countryphone, .ltm-form .multiselect__tags { background: #F4F8FB !important; border: 1px solid #E3E9EF !important; border-radius: 12px !important; min-height: 50px !important; font-size: 16px !important; color: var(--ltm-piz) !important; box-shadow: none !important; }
-.ltm-form .form-control:focus, .ltm-form .countryphone:focus, .ltm-form .multiselect--active .multiselect__tags { border-color: var(--ltm-cel) !important; outline: 3px solid rgba(0,174,234,.25) !important; outline-offset: 0; }
-.ltm-form textarea.form-control { min-height: 84px !important; }
-.ltm-form .button-element { background: var(--ltm-piz) !important; border: 0 !important; border-radius: 999px !important; min-height: 56px !important; padding: 0 26px !important; box-shadow: none !important; transition: transform .2s ease, background-color .2s ease; }
-.ltm-form .button-element:hover { background: #1E242D !important; transform: translateY(-2px); }
-.ltm-form .button-element, .ltm-form .button-element * { color: #fff !important; font-family: "Hanken Grotesk", system-ui, sans-serif !important; font-size: 19px !important; font-weight: 700 !important; }
+.ltm-form, .ltm-form-col .c-form, .ltm-form label, .ltm-form-col .c-form label, .ltm-form input, .ltm-form-col .c-form input, .ltm-form textarea, .ltm-form-col .c-form textarea, .ltm-form .multiselect, .ltm-form-col .c-form .multiselect { font-family: "Hanken Grotesk", system-ui, sans-serif !important; }
+.ltm-form #_builder-form, .ltm-form-col .c-form #_builder-form { background: transparent !important; }
+.ltm-form label, .ltm-form-col .c-form label, .ltm-form .field-label, .ltm-form-col .c-form .field-label { font-size: 13px !important; font-weight: 600 !important; color: #5B6673 !important; margin-bottom: 5px !important; }
+.ltm-form .form-control, .ltm-form-col .c-form .form-control, .ltm-form .countryphone, .ltm-form-col .c-form .countryphone, .ltm-form .multiselect__tags, .ltm-form-col .c-form .multiselect__tags { background: #F4F8FB !important; border: 1px solid #E3E9EF !important; border-radius: 12px !important; min-height: 50px !important; font-size: 16px !important; color: var(--ltm-piz) !important; box-shadow: none !important; }
+.ltm-form .form-control:focus, .ltm-form-col .c-form .form-control:focus, .ltm-form .countryphone:focus, .ltm-form-col .c-form .countryphone:focus, .ltm-form .multiselect--active .multiselect__tags, .ltm-form-col .c-form .multiselect--active .multiselect__tags { border-color: var(--ltm-cel) !important; outline: 3px solid rgba(0,174,234,.25) !important; outline-offset: 0; }
+.ltm-form textarea.form-control, .ltm-form-col .c-form textarea.form-control { min-height: 84px !important; }
+.ltm-form .button-element, .ltm-form-col .c-form .button-element { background: var(--ltm-piz) !important; border: 0 !important; border-radius: 999px !important; min-height: 56px !important; padding: 0 26px !important; box-shadow: none !important; transition: transform .2s ease, background-color .2s ease; }
+.ltm-form .button-element:hover, .ltm-form-col .c-form .button-element:hover { background: #1E242D !important; transform: translateY(-2px); }
+.ltm-form .button-element, .ltm-form-col .c-form .button-element, .ltm-form .button-element *, .ltm-form-col .c-form .button-element * { color: #fff !important; font-family: "Hanken Grotesk", system-ui, sans-serif !important; font-size: 19px !important; font-weight: 700 !important; }
 
 
 /* Columnas de la primera pantalla: izquierda más ancha, 64 px de separación, alineadas arriba (solo computadora y tableta) */
@@ -100,9 +100,9 @@
 .ltm-tag p::before { content: ""; width: 22px; height: 3px; border-radius: 3px; background: var(--ltm-cel); flex: none; }
 .ltm-tag { margin-bottom: 18px !important; }
 
-.ltm-h2, .ltm-h2 :is(h1,h2,h3,h4,h5,h6,p) { font-family: "Archivo", "Arial Narrow", sans-serif !important; font-stretch: 80%; font-weight: 800 !important; font-size: clamp(34px, 4.6vw, 60px) !important; line-height: .98 !important; letter-spacing: -.02em; color: var(--ltm-piz) !important; text-align: left !important; text-wrap: balance; }
+.ltm-h2:is(#ltm-x, .ltm-h2), .ltm-h2:is(#ltm-x, .ltm-h2) :is(h1,h2,h3,h4,h5,h6,p) { font-family: "Archivo", "Arial Narrow", sans-serif !important; font-stretch: 80%; font-weight: 800 !important; font-size: clamp(34px, 4.6vw, 60px) !important; line-height: .98 !important; letter-spacing: -.02em; color: var(--ltm-piz) !important; text-align: left !important; text-wrap: balance; }
 .ltm-h2 { max-width: 820px; }
-.ltm-intro, .ltm-intro p { font-family: "Hanken Grotesk", system-ui, sans-serif !important; font-size: 19px !important; line-height: 1.55 !important; color: #5B6673 !important; text-align: left !important; }
+.ltm-intro:is(#ltm-x, .ltm-intro), .ltm-intro:is(#ltm-x, .ltm-intro) p { font-family: "Hanken Grotesk", system-ui, sans-serif !important; font-size: 19px !important; line-height: 1.55 !important; color: #5B6673 !important; text-align: left !important; }
 .ltm-intro { max-width: 640px; margin-top: 18px !important; }
 
 .ltm-grid4.c-row { margin-top: 44px !important; }
@@ -192,8 +192,8 @@
    Botón de WhatsApp: ltm-boton-wa · Columna derecha: bloque de código 04 (conversación) */
 .ltm-osc.c-section { background: var(--ltm-piz) !important; position: relative; overflow: hidden; isolation: isolate; padding: clamp(64px, 9vw, 120px) 0 !important; }
 .ltm-osc.c-section::before { content: ""; position: absolute; z-index: -1; left: -220px; bottom: -240px; width: 780px; height: 780px; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,174,234,.24), rgba(0,174,234,0)); pointer-events: none; }
-.ltm-osc :is(.ltm-tag, .ltm-tag p, .ltm-intro, .ltm-intro p) { color: var(--ltm-suave-osc) !important; }
-.ltm-osc :is(.ltm-h2, .ltm-h2 :is(h1,h2,h3,h4,h5,h6,p)) { color: #fff !important; }
+.ltm-osc:is(#ltm-x, .ltm-osc) :is(.ltm-tag, .ltm-tag p, .ltm-intro, .ltm-intro p) { color: var(--ltm-suave-osc) !important; }
+.ltm-osc:is(#ltm-x, .ltm-osc) :is(.ltm-h2, .ltm-h2 :is(h1,h2,h3,h4,h5,h6,p)) { color: #fff !important; }
 
 @media (min-width: 768px) {
   .c-row.ltm-2col > .inner { gap: 64px; align-items: center !important; flex-wrap: nowrap !important; }
@@ -550,4 +550,12 @@
   .ltm-cab:is(#ltm-x, .c-section) .c-column > .inner { gap: 10px; }
   .ltm-cab:is(#ltm-x, .c-section) .c-image img { height: 32px !important; }
   .ltm-cab:is(#ltm-x, .c-section) .c-button { display: none !important; }
+}
+/* Etiquetas del formulario dentro de la tarjeta: GHL las pinta con el color del formulario (blanco); aquí se fuerzan en gris */
+.ltm-form-col:is(#ltm-x, .c-column) .c-form :is(label, .field-label, .label-alignment) { color: #5B6673 !important; font-family: "Hanken Grotesk", system-ui, sans-serif !important; font-size: 13px !important; font-weight: 600 !important; }
+.ltm-form-col:is(#ltm-x, .c-column) .c-form :is(.terms-and-conditions, .terms-and-conditions *, .tnc-content, .tnc-content *, .checkbox-container label) { color: #5B6673 !important; font-size: 13px !important; font-weight: 400 !important; }
+/* Cierre: el texto de la izquierda queda arriba y acompaña al formulario al bajar (solo computadora) */
+@media (min-width: 768px) {
+  .ltm-osc .c-row.ltm-2col > .inner { align-items: flex-start !important; }
+  .ltm-osc .c-row.ltm-2col > .inner > .c-column:not(.ltm-form-col) { position: sticky; top: 32px; }
 }
