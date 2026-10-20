@@ -4,6 +4,9 @@
       { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" },
       { "key": "Access-Control-Allow-Origin", "value": "*" },
       { "key": "Content-Type", "value": "text/css; charset=utf-8" }
+    ] },
+    { "source": "/marca/(.*)", "headers": [
+      { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
     ] }
   ]
 }
