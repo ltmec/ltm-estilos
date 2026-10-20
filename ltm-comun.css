@@ -445,7 +445,7 @@
 .lw-p .lw-tab { all: unset; box-sizing: border-box; cursor: pointer; display: flex; align-items: center; gap: 14px; min-width: 260px; padding: 14px 20px 14px 14px; background: #fff; border: 1px solid var(--lw-linea); border-radius: 18px; font-family: "Hanken Grotesk", system-ui, sans-serif; color: var(--ltm-piz); text-align: left; transition: border-color .2s, box-shadow .2s, transform .2s; }
 .lw-p .lw-tab:hover { border-color: var(--ltm-cel); transform: translateY(-2px); }
 .lw-p .lw-tab:focus-visible { outline: 3px solid rgba(0,174,234,.45); outline-offset: 2px; }
-.lw-p .lw-tab img { flex: none; display: block; width: 52px; height: 52px; object-fit: contain; background: #fff; border: 1px solid var(--lw-linea); border-radius: 14px; padding: 6px; }
+.lw-p .lw-tab img { flex: none; display: block; width: 132px; height: 52px; object-fit: contain; background: #fff; border: 1px solid var(--lw-linea); border-radius: 12px; padding: 8px 10px; }
 .lw-p .lw-tab span { display: block; font-size: 14px; color: var(--lw-suave); line-height: 1.35; }
 .lw-p .lw-tab b { display: block; font-size: 17px; color: var(--ltm-piz); margin-bottom: 2px; }
 .lw-p .lw-tab[aria-selected="true"] { background: var(--ltm-piz); border-color: var(--ltm-piz); box-shadow: 0 14px 30px -18px rgba(41,49,61,.7); }
@@ -454,7 +454,7 @@
 .lw-p .lw-tab[aria-selected="true"] img { border-color: transparent; box-shadow: 0 0 0 3px var(--ltm-cel); }
 .lw-p .lw-casos .lc-caso { margin-top: 20px; }
 .lw-p .lw-casos .lc-caso[hidden] { display: none !important; }
-@media (max-width: 560px) { .lw-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; } .lw-p .lw-tab { min-width: 0; flex-direction: column; align-items: flex-start; gap: 10px; padding: 12px; } .lw-p .lw-tab b { font-size: 15px; } .lw-p .lw-tab span { font-size: 13px; } }
+@media (max-width: 560px) { .lw-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; } .lw-p .lw-tab { min-width: 0; flex-direction: column; align-items: flex-start; gap: 10px; padding: 12px; } .lw-p .lw-tab img { width: 100%; height: 48px; } .lw-p .lw-tab b { font-size: 15px; } .lw-p .lw-tab span { font-size: 13px; } }
 .lw-p .lc-reto { margin-top: 14px; } .lw-p .lc-flujo-t { margin-top: 24px; } .lw-p .lc-flujo { margin-top: 12px; }
 /* Preguntas frecuentes */
 .lw-faq { max-width: 860px; margin-top: 36px; border-top: 1px solid var(--lw-linea); }
