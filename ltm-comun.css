@@ -602,7 +602,7 @@
 
 /* ===== Web · Páginas de servicio (piezas nuevas sobre las del Inicio) ===== */
 /* Conversación de ejemplo dentro de la web (ltm-chat de la landing): se recuperan los márgenes que quita el reinicio de lw-p */
-.lw-p .ltm-msj { margin: 0 0 10px; }
+.lw-p .ltm-msj { margin: 0 0 10px; padding: 11px 14px; }
 .lw-p .ltm-msj--yo { margin-left: auto; }
 .lw-p .ltm-chat__nota { margin: 12px 0 0; }
 .lw-chat-hero { box-shadow: 0 30px 60px -30px rgba(0,0,0,.55); }
