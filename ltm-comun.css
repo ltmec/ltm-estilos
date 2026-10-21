@@ -667,3 +667,6 @@
   .lw-tabla-fila > span:last-child::before { content: "Chatbot con IA"; color: #0079A6; }
   .lw-tabla-fila > span:last-child { padding-bottom: 16px; }
 }
+/* Párrafo de apoyo debajo de un H2 en secciones claras */
+.lw-p .lw-texto { font-size: 19px; line-height: 1.6; color: var(--lw-suave); margin-top: 18px; max-width: 720px; }
+@media (max-width: 560px) { .lw-p .lw-texto { font-size: 17px; } }
