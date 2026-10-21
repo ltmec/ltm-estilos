@@ -693,3 +693,22 @@
 .lw-p .lw-tablero-pie { font-size: 12px; color: #9FB0C2; text-align: center; margin-top: 14px; }
 @media (prefers-reduced-motion: reduce) { .lw-ficha--viaja { animation: none; opacity: 0; } .lw-tablero-ganado .lw-ficha--viaja { opacity: 1; } }
 @media (max-width: 560px) { .lw-tablero { padding: 18px; } .lw-tablero-cols { grid-template-columns: 1fr 1fr; } .lw-tablero-cols > div { min-height: 150px; } }
+
+/* Proceso automático animado (primera pantalla de Automatización de procesos): cada paso se enciende en orden */
+.lw-proceso { background: var(--ltm-piz2); border: 1px solid var(--ltm-piz3); border-radius: 28px; padding: 26px; color: #fff; box-shadow: 0 30px 60px -30px rgba(0,0,0,.55); }
+.lw-p .lw-proceso-hd { font-size: 13px; font-weight: 600; color: #9FB0C2; margin-bottom: 18px; }
+.lw-p .lw-proceso ol { list-style: none; display: grid; gap: 14px; position: relative; }
+.lw-proceso ol::before { content: ""; position: absolute; left: 17px; top: 18px; bottom: 18px; width: 2px; background: var(--ltm-piz3); }
+.lw-proceso li { position: relative; display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: center; }
+.lw-proceso li i { position: relative; z-index: 1; width: 36px; height: 36px; border-radius: 50%; background: var(--ltm-piz2); border: 2px solid var(--ltm-piz3); color: #9FB0C2; font-style: normal; font-family: "Archivo", sans-serif; font-weight: 800; font-size: 15px; display: flex; align-items: center; justify-content: center; animation: lw-paso-n 10s infinite; }
+.lw-proceso li > div { background: rgba(255,255,255,.04); border: 1px solid transparent; border-radius: 14px; padding: 10px 14px; animation: lw-paso-c 10s infinite; }
+.lw-proceso li b { display: block; font-size: 15px; }
+.lw-proceso li span { display: block; font-size: 12.5px; color: #9FB0C2; }
+.lw-proceso li:nth-child(2) i, .lw-proceso li:nth-child(2) > div { animation-delay: 1.2s; }
+.lw-proceso li:nth-child(3) i, .lw-proceso li:nth-child(3) > div { animation-delay: 2.4s; }
+.lw-proceso li:nth-child(4) i, .lw-proceso li:nth-child(4) > div { animation-delay: 3.6s; }
+.lw-proceso li:nth-child(5) i, .lw-proceso li:nth-child(5) > div { animation-delay: 4.8s; }
+@keyframes lw-paso-n { 0%, 4% { background: var(--ltm-piz2); border-color: var(--ltm-piz3); color: #9FB0C2; } 8%, 60% { background: var(--ltm-cel); border-color: var(--ltm-cel); color: var(--ltm-piz); } 68%, 100% { background: var(--ltm-piz2); border-color: var(--ltm-piz3); color: #9FB0C2; } }
+@keyframes lw-paso-c { 0%, 4% { border-color: transparent; background: rgba(255,255,255,.04); } 8%, 60% { border-color: rgba(0,174,234,.5); background: rgba(0,174,234,.08); } 68%, 100% { border-color: transparent; background: rgba(255,255,255,.04); } }
+.lw-p .lw-proceso-pie { font-size: 12px; color: #9FB0C2; text-align: center; margin-top: 16px; }
+@media (prefers-reduced-motion: reduce) { .lw-proceso li i, .lw-proceso li > div { animation: none; } .lw-proceso li i { background: var(--ltm-cel); border-color: var(--ltm-cel); color: var(--ltm-piz); } }
