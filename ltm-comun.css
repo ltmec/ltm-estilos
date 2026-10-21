@@ -647,3 +647,23 @@
   .lw-sino, .lw-demo { grid-template-columns: 1fr; gap: 28px; }
 }
 @media (max-width: 560px) { .lw-pil.lw-pil--4 { grid-template-columns: 1fr; } .lw-p .lw-def p:not(.lw-tag) { font-size: 17px; } .lw-demo-chat { min-height: 360px; } }
+/* Tabla comparativa (bot de menús frente a chatbot con IA): la columna de la derecha es la nuestra */
+.lw-tabla { margin-top: 40px; border: 1px solid var(--lw-linea); border-radius: 22px; overflow: hidden; background: #fff; }
+.lw-tabla-fila { display: grid; grid-template-columns: 1fr 1.2fr 1.2fr; }
+.lw-tabla-fila + .lw-tabla-fila { border-top: 1px solid var(--lw-linea); }
+.lw-tabla-fila > * { padding: 18px 22px; font-size: 16px; line-height: 1.5; }
+.lw-tabla-fila > b { font-weight: 600; color: var(--ltm-piz); }
+.lw-tabla-fila > span { color: var(--lw-suave); }
+.lw-tabla-fila > span:last-child { background: #F0FAFE; color: var(--ltm-piz); font-weight: 500; }
+.lw-tabla-cab > * { font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding-top: 14px; padding-bottom: 14px; }
+.lw-tabla-cab > span:last-child { background: var(--ltm-piz); color: var(--ltm-cel); }
+@media (max-width: 767px) {
+  .lw-tabla-cab { display: none; }
+  .lw-tabla-fila { grid-template-columns: 1fr; }
+  .lw-tabla-fila > * { padding: 10px 18px; }
+  .lw-tabla-fila > b { padding-top: 16px; }
+  .lw-tabla-fila > span::before { display: block; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 2px; color: var(--lw-suave); }
+  .lw-tabla-fila > span:nth-of-type(1)::before { content: "Bot de menús"; }
+  .lw-tabla-fila > span:last-child::before { content: "Chatbot con IA"; color: #0079A6; }
+  .lw-tabla-fila > span:last-child { padding-bottom: 16px; }
+}
