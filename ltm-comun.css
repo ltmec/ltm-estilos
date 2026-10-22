@@ -712,3 +712,27 @@
 @keyframes lw-paso-c { 0%, 4% { border-color: transparent; background: rgba(255,255,255,.04); } 8%, 60% { border-color: rgba(0,174,234,.5); background: rgba(0,174,234,.08); } 68%, 100% { border-color: transparent; background: rgba(255,255,255,.04); } }
 .lw-p .lw-proceso-pie { font-size: 12px; color: #9FB0C2; text-align: center; margin-top: 16px; }
 @media (prefers-reduced-motion: reduce) { .lw-proceso li i, .lw-proceso li > div { animation: none; } .lw-proceso li i { background: var(--ltm-cel); border-color: var(--ltm-cel); color: var(--ltm-piz); } }
+
+/* Documento que se llena solo (primera pantalla de Gestión documental): datos uno por uno, firma y carpeta */
+.lw-doc { background: var(--ltm-piz2); border: 1px solid var(--ltm-piz3); border-radius: 28px; padding: 28px; box-shadow: 0 30px 60px -30px rgba(0,0,0,.55); }
+.lw-doc-hoja { position: relative; background: #fff; color: var(--ltm-piz); border-radius: 14px; padding: 22px 22px 18px; box-shadow: 0 16px 30px -18px rgba(0,0,0,.6); }
+.lw-p .lw-doc-tit { font-family: "Archivo", sans-serif; font-stretch: 80%; font-weight: 800; font-size: 20px; padding-bottom: 12px; border-bottom: 2px solid #E3E9EF; margin-bottom: 8px; }
+.lw-p .lw-doc-filas p { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px dashed #E3E9EF; font-size: 14px; }
+.lw-doc-filas span { color: var(--lw-suave); }
+.lw-doc-filas b { font-weight: 700; opacity: 0; animation: lw-dato 10s infinite; }
+.lw-doc-filas p:nth-child(2) b { animation-delay: .6s; } .lw-doc-filas p:nth-child(3) b { animation-delay: 1.2s; } .lw-doc-filas p:nth-child(4) b { animation-delay: 1.8s; }
+@keyframes lw-dato { 0%, 8% { opacity: 0; background: transparent; } 12% { opacity: 1; background: #E3F6FD; } 22%, 88% { opacity: 1; background: transparent; } 94%, 100% { opacity: 0; } }
+.lw-p .lw-doc-firma { margin-top: 14px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: #15803D; background: #DCFCE7; border-radius: 999px; padding: 6px 12px; opacity: 0; animation: lw-firma 10s infinite; }
+.lw-doc-firma::before { content: "\2713"; }
+@keyframes lw-firma { 0%, 30% { opacity: 0; transform: scale(.9); } 34%, 88% { opacity: 1; transform: none; } 94%, 100% { opacity: 0; } }
+.lw-p .lw-doc-ruta { margin-top: 16px; font-size: 13px; font-weight: 600; color: var(--ltm-suave-osc); background: var(--ltm-piz3); border-radius: 12px; padding: 10px 14px; opacity: 0; animation: lw-ruta 10s infinite; }
+.lw-doc-ruta::before { content: "\1F4C1  "; }
+@keyframes lw-ruta { 0%, 44% { opacity: 0; transform: translateY(6px); } 48%, 88% { opacity: 1; transform: none; } 94%, 100% { opacity: 0; } }
+.lw-p .lw-doc-pie { font-size: 12px; color: #9FB0C2; text-align: center; margin-top: 14px; }
+@media (prefers-reduced-motion: reduce) { .lw-doc-filas b, .lw-doc-firma, .lw-doc-ruta { animation: none; opacity: 1; } }
+/* Lista de tipos de documento en píldoras */
+.lw-p .lw-tipos { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 40px; }
+.lw-p .lw-tipos li { display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid var(--lw-linea); border-radius: 16px; padding: 16px 18px; font-weight: 600; font-size: 16px; }
+.lw-tipos li::before { content: ""; flex: none; width: 28px; height: 34px; border-radius: 4px; background: linear-gradient(#E3F6FD, #E3F6FD) padding-box, linear-gradient(135deg, var(--ltm-cel), #0079A6) border-box; border: 2px solid transparent; }
+@media (max-width: 960px) { .lw-p .lw-tipos { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .lw-p .lw-tipos { grid-template-columns: 1fr; } .lw-doc { padding: 18px; } }
