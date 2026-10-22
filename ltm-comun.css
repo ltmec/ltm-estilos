@@ -753,3 +753,39 @@
 /* Preguntas frecuentes: sin el recuadro de foco al hacer clic con el mouse (se mantiene al navegar con teclado) */
 .lw-faq summary:focus:not(:focus-visible) { outline: none; }
 .lw-faq summary:focus-visible { outline: 3px solid rgba(0,174,234,.45); outline-offset: 4px; border-radius: 8px; }
+
+/* ===== Web · Página Servicios: áreas del negocio con tarjetas, recorrido y banda de llamado ===== */
+.lw-area { display: grid; grid-template-columns: 220px 1fr; gap: 32px; padding: 36px 0; border-top: 1px solid var(--lw-linea); }
+.lw-area:first-child { border-top: 0; padding-top: 0; }
+.lw-p .lw-area-t { font-family: "Archivo", "Arial Narrow", sans-serif; font-stretch: 80%; font-weight: 800; font-size: 32px; line-height: 1; color: var(--ltm-piz); display: flex; flex-direction: column; gap: 10px; }
+.lw-area-t span { font-family: "Hanken Grotesk", system-ui, sans-serif; font-size: 13px; font-weight: 700; color: #0079A6; letter-spacing: .06em; }
+.lw-tarjetas { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.lw-tarjeta { display: flex; flex-direction: column; gap: 10px; background: #fff; border: 1px solid var(--lw-linea); border-radius: 22px; padding: 26px; color: var(--ltm-piz) !important; transition: border-color .2s, transform .2s, box-shadow .2s; }
+.lw-tarjeta:hover { border-color: var(--ltm-cel); transform: translateY(-3px); box-shadow: 0 18px 36px -24px rgba(41,49,61,.45); }
+.lw-tarjeta--ancha { grid-column: 1 / -1; }
+.lw-tarjeta .lw-n { font-size: 14px; font-weight: 600; color: #0079A6; }
+.lw-p .lw-tarjeta h3 { font-family: "Archivo", "Arial Narrow", sans-serif; font-stretch: 80%; font-weight: 800; font-size: 28px; line-height: 1.02; }
+.lw-p .lw-tarjeta-prob { font-size: 16px; font-style: italic; color: var(--lw-suave); }
+.lw-p .lw-tarjeta ul { list-style: none; display: grid; gap: 8px; margin: 4px 0 6px; }
+.lw-p .lw-tarjeta li { position: relative; padding-left: 28px; font-size: 15px; color: #3D4858; }
+.lw-tarjeta li::before { content: "\2713"; position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%; background: #E3F6FD; color: #0079A6; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.lw-tarjeta .lw-ir { margin-top: auto; }
+/* Recorrido: los servicios encadenados */
+.lw-p .lw-recorrido { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 40px 0 8px; counter-reset: lwr; }
+.lw-recorrido li { counter-increment: lwr; position: relative; background: #fff; border: 1px solid var(--lw-linea); border-radius: 18px; padding: 18px 16px; }
+.lw-recorrido li::before { content: counter(lwr); display: flex; width: 30px; height: 30px; border-radius: 50%; background: var(--ltm-cel); color: var(--ltm-piz); font-family: "Archivo", sans-serif; font-weight: 800; font-size: 14px; align-items: center; justify-content: center; margin-bottom: 10px; }
+.lw-recorrido li:not(:last-child)::after { content: "\2192"; position: absolute; right: -11px; top: 50%; transform: translateY(-50%); z-index: 1; width: 22px; height: 22px; border-radius: 50%; background: var(--ltm-piz); color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; }
+.lw-recorrido b { display: block; font-size: 16px; }
+.lw-recorrido span { display: block; font-size: 14px; color: var(--lw-suave); margin-top: 2px; }
+/* Banda oscura de llamado, centrada */
+.lw-banda .lw-wrap { text-align: center; }
+.lw-banda .lw-h2 { margin: 0 auto; }
+.lw-banda .lw-sub { margin-left: auto; margin-right: auto; }
+.lw-banda .lw-acciones { justify-content: center; }
+@media (max-width: 960px) {
+  .lw-area { grid-template-columns: 1fr; gap: 18px; }
+  .lw-p .lw-area-t { flex-direction: row; align-items: baseline; }
+  .lw-p .lw-recorrido { grid-template-columns: 1fr; }
+  .lw-recorrido li:not(:last-child)::after { content: "\2193"; right: auto; left: 50%; top: auto; bottom: -11px; transform: translateX(-50%); }
+}
+@media (max-width: 767px) { .lw-tarjetas { grid-template-columns: 1fr; } .lw-p .lw-tarjeta h3 { font-size: 24px; } }
