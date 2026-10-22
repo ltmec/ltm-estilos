@@ -750,3 +750,6 @@
 .lw-p .lw-retorno-pie { font-size: 12px; color: #9FB0C2; text-align: center; margin-top: 16px; }
 @media (prefers-reduced-motion: reduce) { .lw-retorno-flecha::after { animation: none; } }
 @media (max-width: 560px) { .lw-retorno { padding: 18px; } .lw-retorno-fila, .lw-retorno-roas { padding: 14px; } }
+/* Preguntas frecuentes: sin el recuadro de foco al hacer clic con el mouse (se mantiene al navegar con teclado) */
+.lw-faq summary:focus:not(:focus-visible) { outline: none; }
+.lw-faq summary:focus-visible { outline: 3px solid rgba(0,174,234,.45); outline-offset: 4px; border-radius: 8px; }
