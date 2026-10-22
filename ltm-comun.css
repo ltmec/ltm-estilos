@@ -730,9 +730,4 @@
 @keyframes lw-ruta { 0%, 44% { opacity: 0; transform: translateY(6px); } 48%, 88% { opacity: 1; transform: none; } 94%, 100% { opacity: 0; } }
 .lw-p .lw-doc-pie { font-size: 12px; color: #9FB0C2; text-align: center; margin-top: 14px; }
 @media (prefers-reduced-motion: reduce) { .lw-doc-filas b, .lw-doc-firma, .lw-doc-ruta { animation: none; opacity: 1; } }
-/* Lista de tipos de documento en píldoras */
-.lw-p .lw-tipos { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 40px; }
-.lw-p .lw-tipos li { display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid var(--lw-linea); border-radius: 16px; padding: 16px 18px; font-weight: 600; font-size: 16px; }
-.lw-tipos li::before { content: ""; flex: none; width: 28px; height: 34px; border-radius: 4px; background: linear-gradient(#E3F6FD, #E3F6FD) padding-box, linear-gradient(135deg, var(--ltm-cel), #0079A6) border-box; border: 2px solid transparent; }
-@media (max-width: 960px) { .lw-p .lw-tipos { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .lw-p .lw-tipos { grid-template-columns: 1fr; } .lw-doc { padding: 18px; } }
+@media (max-width: 560px) { .lw-doc { padding: 18px; } }
