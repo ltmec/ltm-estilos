@@ -840,3 +840,28 @@ html.lw-sin-scroll, html.lw-sin-scroll body { overflow: hidden !important; }
   .lw-p .lw-hamburguesa { display: flex; }
 }
 @media (prefers-reduced-motion: reduce) { .lw-mega, .lw-menu-link i { transition: none; } }
+
+/* ===== Web · Nosotros: cifras de la empresa, línea de tiempo y sectores ===== */
+.lw-datos { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--ltm-piz3); border: 1px solid var(--ltm-piz3); border-radius: 28px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(0,0,0,.55); }
+.lw-datos > div { background: var(--ltm-piz2); padding: 28px 24px; }
+.lw-datos b { display: block; font-family: "Archivo", "Arial Narrow", sans-serif; font-stretch: 80%; font-weight: 800; font-size: clamp(40px, 4.4vw, 56px); line-height: 1; color: #fff; }
+.lw-datos > div:first-child b { color: var(--ltm-cel); }
+.lw-datos span { display: block; margin-top: 8px; font-size: 14px; color: var(--ltm-suave-osc); }
+.lw-p .lw-historia { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 44px; position: relative; }
+.lw-historia::before { content: ""; position: absolute; left: 0; right: 0; top: 13px; height: 2px; background: linear-gradient(90deg, var(--ltm-cel), var(--lw-linea)); }
+.lw-historia li { position: relative; padding-top: 38px; }
+.lw-historia li::before { content: ""; position: absolute; left: 0; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: #fff; border: 3px solid var(--ltm-cel); box-sizing: border-box; }
+.lw-historia li:last-child::before { background: var(--ltm-cel); }
+.lw-historia em { display: block; font-style: normal; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #0079A6; margin-bottom: 6px; }
+.lw-historia b { display: block; font-size: 19px; margin-bottom: 6px; }
+.lw-p .lw-historia p { color: var(--lw-suave); font-size: 15px; }
+.lw-p .lw-sectores { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 40px; }
+.lw-sectores li { background: #fff; border: 1px solid var(--lw-linea); border-radius: 18px; padding: 20px 18px; border-top: 4px solid var(--ltm-cel); }
+.lw-sectores b { display: block; font-family: "Archivo", "Arial Narrow", sans-serif; font-stretch: 80%; font-weight: 800; font-size: 24px; line-height: 1; }
+.lw-sectores span { display: block; margin-top: 6px; font-size: 14px; color: var(--lw-suave); }
+@media (max-width: 960px) {
+  .lw-p .lw-historia { grid-template-columns: 1fr 1fr; }
+  .lw-historia::before { display: none; }
+  .lw-p .lw-sectores { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) { .lw-p .lw-historia { grid-template-columns: 1fr; } .lw-datos > div { padding: 22px 18px; } }
