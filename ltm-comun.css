@@ -731,3 +731,22 @@
 .lw-p .lw-doc-pie { font-size: 12px; color: #9FB0C2; text-align: center; margin-top: 14px; }
 @media (prefers-reduced-motion: reduce) { .lw-doc-filas b, .lw-doc-firma, .lw-doc-ruta { animation: none; opacity: 1; } }
 @media (max-width: 560px) { .lw-doc { padding: 18px; } }
+
+/* Tablero de retorno (primera pantalla de Campañas): inversión → ventas → ROAS, con cifras que suben como contador */
+.lw-retorno { background: var(--ltm-piz2); border: 1px solid var(--ltm-piz3); border-radius: 28px; padding: 26px; color: #fff; box-shadow: 0 30px 60px -30px rgba(0,0,0,.55); }
+.lw-p .lw-retorno-hd { font-size: 13px; font-weight: 600; color: #9FB0C2; margin-bottom: 16px; }
+.lw-retorno-fila { display: flex; align-items: center; justify-content: space-between; gap: 14px; background: rgba(255,255,255,.05); border: 1px solid var(--ltm-piz3); border-radius: 16px; padding: 16px 18px; }
+.lw-retorno-fila span, .lw-retorno-roas span { font-size: 14px; color: var(--ltm-suave-osc); }
+.lw-retorno b { font-family: "Archivo", "Arial Narrow", sans-serif; font-stretch: 80%; font-weight: 800; font-size: clamp(28px, 3vw, 38px); line-height: 1; white-space: nowrap; }
+.lw-retorno b small { font-size: .5em; margin-right: 4px; vertical-align: .45em; letter-spacing: .02em; }
+.lw-retorno-fila--ventas { border-color: rgba(74,222,128,.45); background: rgba(74,222,128,.08); }
+.lw-retorno-fila--ventas b { color: #4ADE80; }
+.lw-retorno-flecha { position: relative; height: 34px; }
+.lw-retorno-flecha::before { content: ""; position: absolute; left: 50%; top: 4px; bottom: 4px; width: 2px; background: var(--ltm-piz3); }
+.lw-retorno-flecha::after { content: ""; position: absolute; left: calc(50% - 4px); top: 4px; width: 10px; height: 10px; border-radius: 50%; background: var(--ltm-cel); animation: le-cae 1.6s ease-in infinite; }
+.lw-retorno-roas { margin-top: 14px; display: flex; align-items: center; justify-content: space-between; gap: 14px; background: #fff; color: var(--ltm-piz); border-radius: 16px; padding: 16px 18px; box-shadow: 0 0 0 6px rgba(0,174,234,.18); }
+.lw-retorno-roas span { color: var(--lw-suave); font-weight: 600; }
+.lw-retorno-roas b { color: #0079A6; font-size: clamp(34px, 3.6vw, 46px); }
+.lw-p .lw-retorno-pie { font-size: 12px; color: #9FB0C2; text-align: center; margin-top: 16px; }
+@media (prefers-reduced-motion: reduce) { .lw-retorno-flecha::after { animation: none; } }
+@media (max-width: 560px) { .lw-retorno { padding: 18px; } .lw-retorno-fila, .lw-retorno-roas { padding: 14px; } }
