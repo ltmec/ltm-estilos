@@ -831,7 +831,7 @@
 .lw-movil-nav a b { display: block; font-size: 17px; }
 .lw-movil-nav a span { display: block; font-size: 13px; color: var(--ltm-suave-osc); margin-top: 2px; }
 .lw-p .lw-movil-nav a.lw-movil-simple { background: transparent; border: 0; border-top: 1px solid var(--ltm-piz3); border-radius: 0; padding: 16px 2px; font-weight: 700; font-size: 18px; margin-top: 6px; }
-.lw-movil-pie { margin-top: auto; padding-top: 24px; display: grid; gap: 10px; }
+.lw-movil-pie { margin-top: auto; position: sticky; bottom: calc(-24px - env(safe-area-inset-bottom)); padding: 16px 0 calc(24px + env(safe-area-inset-bottom)); margin-bottom: calc(-24px - env(safe-area-inset-bottom)); background: linear-gradient(rgba(41,49,61,0), var(--ltm-piz) 18px); display: grid; gap: 10px; }
 .lw-movil-pie .lw-btn { width: 100%; }
 .lw-p .lw-movil-wa { display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 999px; background: var(--ltm-wa); color: var(--ltm-piz); font-weight: 700; font-size: 18px; }
 html.lw-sin-scroll, html.lw-sin-scroll body { overflow: hidden !important; }
