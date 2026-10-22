@@ -822,7 +822,7 @@
 .lw-movil { position: fixed; inset: 0; z-index: 2147483000; background: var(--ltm-piz); color: #fff; overflow-y: auto; display: flex; flex-direction: column; padding: 16px 20px calc(24px + env(safe-area-inset-bottom)); }
 .lw-movil[hidden] { display: none !important; }
 .lw-movil-top { display: flex; align-items: center; justify-content: space-between; }
-.lw-logo--claro img { display: block; height: 40px; width: auto; background: #fff; border-radius: 10px; padding: 6px 10px; box-sizing: content-box; }
+.lw-logo--claro img { display: block; height: 38px; width: auto; }
 .lw-p .lw-movil-cerrar { all: unset; box-sizing: border-box; cursor: pointer; width: 46px; height: 46px; border-radius: 50%; background: var(--ltm-piz2); color: #fff; font-size: 20px; display: flex; align-items: center; justify-content: center; }
 .lw-movil-nav { display: flex; flex-direction: column; gap: 8px; margin-top: 22px; }
 .lw-p .lw-movil-sec { font-family: "Archivo", "Arial Narrow", sans-serif; font-stretch: 80%; font-weight: 800; font-size: 32px; line-height: 1; color: #fff; margin-bottom: 4px; }
