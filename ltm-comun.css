@@ -865,3 +865,23 @@ html.lw-sin-scroll, html.lw-sin-scroll body { overflow: hidden !important; }
   .lw-p .lw-sectores { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 560px) { .lw-p .lw-historia { grid-template-columns: 1fr; } .lw-datos > div { padding: 22px 18px; } }
+
+/* ===== Web · Pie con enlaces (sección universal "LTM · Pie", Custom Class lw-pagina, bloque web/ghl/bloque-pie.html) =====
+   En la landing (automatizar.) el script agrega lw-pie--landing y queda solo la línea de contacto. */
+.lw-pie { background: var(--ltm-piz); color: var(--ltm-suave-osc); border-top: 1px solid var(--ltm-piz3); padding: 64px 0 28px; font-size: 15px; }
+.lw-pie-cols { display: grid; grid-template-columns: 1.3fr 1.2fr .8fr 1fr; gap: 40px; }
+.lw-p .lw-pie-marca p { margin-top: 18px; max-width: 300px; line-height: 1.6; color: #9FB0C2; }
+.lw-pie-col { display: flex; flex-direction: column; align-items: flex-start; gap: 11px; }
+.lw-p .lw-pie-t { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ltm-cel); margin-bottom: 4px; }
+.lw-p .lw-pie-col a:not(.lw-btn) { color: var(--ltm-suave-osc) !important; transition: color .15s; }
+.lw-p .lw-pie-col a:not(.lw-btn):hover { color: #fff !important; }
+.lw-p .lw-pie .lw-btn--pie { height: 46px; padding: 0 20px; font-size: 16px; margin-top: 6px; }
+.lw-pie-base { margin-top: 52px; padding-top: 22px; border-top: 1px solid var(--ltm-piz3); font-size: 14px; color: #9FB0C2; }
+.lw-p .lw-pie-simple { display: none; text-align: center; text-wrap: balance; line-height: 1.6; }
+.lw-p .lw-pie-simple a { color: var(--ltm-suave-osc) !important; text-decoration: underline !important; white-space: nowrap; }
+.lw-pie--landing { padding: 28px 0; }
+.lw-pie--landing :is(.lw-pie-cols, .lw-pie-base > p:not(.lw-pie-simple)) { display: none; }
+.lw-pie--landing .lw-pie-base { margin: 0; padding: 0; border: 0; }
+.lw-p .lw-pie--landing .lw-pie-simple { display: block; }
+@media (max-width: 960px) { .lw-pie-cols { grid-template-columns: 1fr 1fr; } .lw-pie-marca { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .lw-pie { padding-top: 48px; } .lw-pie-cols { grid-template-columns: 1fr; gap: 32px; } .lw-pie-base { margin-top: 40px; } }
