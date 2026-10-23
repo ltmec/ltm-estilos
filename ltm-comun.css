@@ -380,10 +380,10 @@
 /* ===== Sección 11 · Cierre y pie =====
    Cierre: sección con dos clases ltm-osc y ltm-cierre · fila de 1 columna · ltm-h2, ltm-intro y dos botones (ltm-boton-cel y ltm-boton-wa ltm-abre-chat)
    Pie: sección ltm-pie · un Paragraph con clase ltm-pie-t */
-.ltm-cierre.c-section::before { left: 50% !important; right: auto !important; top: 50% !important; bottom: auto !important; transform: translate(-50%, -50%); width: 900px !important; height: 900px !important; }
+.ltm-cierre.c-section::before { left: 50% !important; right: auto !important; top: 50% !important; bottom: auto !important; transform: translate(-50%, -50%); width: 1100px !important; height: 130% !important; }
 .ltm-cierre .c-column > .inner { flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; align-items: center !important; column-gap: 12px; }
 .ltm-cierre .c-column > .inner > :not(.c-button) { flex: 0 0 100%; }
-.ltm-cierre :is(.ltm-h2, .ltm-h2 :is(h1,h2,h3,h4,h5,h6,p), .ltm-intro, .ltm-intro p) { text-align: center !important; margin-left: auto !important; margin-right: auto !important; }
+.ltm-cierre:is(#ltm-x, .ltm-cierre) :is(.ltm-h2, .ltm-h2 :is(h1,h2,h3,h4,h5,h6,p), .ltm-intro, .ltm-intro p) { text-align: center !important; margin-left: auto !important; margin-right: auto !important; }
 .ltm-cierre .ltm-h2 { max-width: 860px; }
 .ltm-cierre .ltm-intro { max-width: 640px; }
 .ltm-cierre .c-button { text-align: center !important; margin-top: 34px !important; }
