@@ -887,3 +887,16 @@ html.lw-sin-scroll, html.lw-sin-scroll body { overflow: hidden !important; }
 .lw-p .lw-cifras p { margin-top: 10px; font-size: 16px; color: var(--lw-suave); }
 .lw-p .lw-pil > div .lw-ir { display: inline-block; margin-top: 12px; font-size: 15px; color: var(--ltm-piz) !important; }
 @media (max-width: 960px) { .lw-cifras { grid-template-columns: 1fr; } }
+
+/* ===== Web · Demo "Arma tu asistente" en vivo (Chatbot): mensajes con scroll, campo trampa y cierre con botones ===== */
+.lw-p .lw-demo-msjs { flex: 1 1 auto; display: flex; flex-direction: column; overflow-y: auto; max-height: 380px; min-height: 260px; padding-right: 4px; overscroll-behavior: contain; }
+.lw-p .lw-demo-msjs .ltm-msj, .lw-p .lw-demo-msjs .ltm-escribiendo { flex: none; }
+.lw-p .lw-demo-escribe .lw-input { flex: 1 1 auto; min-width: 0; }
+.lw-p .lw-demo-escribe :is(input, button):disabled { opacity: .5; cursor: default; }
+.lw-p .lw-demo-web { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+.lw-p .lw-demo-fin { flex: none; margin: 6px 0 4px; padding: 16px; border-radius: 16px; background: rgba(0,174,234,.1); border: 1px solid rgba(0,174,234,.4); }
+.lw-p .lw-demo-fin p { font-size: 15px; color: #fff; margin: 0 0 12px; }
+.lw-p .lw-demo-fin > div { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.lw-p .lw-demo-fin .lw-btn { height: 44px; padding: 0 18px; font-size: 15px; }
+.lw-p .lw-demo-fin .lw-demo-wa { display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 999px; background: var(--ltm-wa); color: var(--ltm-piz) !important; font-weight: 700; font-size: 15px; }
+@media (max-width: 560px) { .lw-p .lw-demo-msjs { max-height: 340px; } }
