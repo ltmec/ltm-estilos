@@ -1,6 +1,6 @@
 // Latinmanagers · Demo "Arma tu asistente" (página /chatbot-whatsapp-ia).
 // Función de Vercel en estilos.ltmec.com/api/demo. La llave está en la variable ANTHROPIC_API_KEY del proyecto (nunca en el código).
-// Límites para cuidar el gasto: solo responde a la web, 8 mensajes por conversación, textos cortos y tope por visitante y por día.
+// Límites para cuidar el gasto (tope de la cuenta de Anthropic: USD 30 al mes): solo responde a la web, 8 mensajes por conversación, textos cortos y tope por visitante y por día.
 import Anthropic from "@anthropic-ai/sdk";
 
 const MODELO = "claude-haiku-5-5"; // nombre general, sin fecha: no se rompe cuando retiran una versión
