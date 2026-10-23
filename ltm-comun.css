@@ -879,3 +879,11 @@ html.lw-sin-scroll, html.lw-sin-scroll body { overflow: hidden !important; }
 .lw-pie-base { margin-top: 52px; padding-top: 22px; border-top: 1px solid var(--ltm-piz3); font-size: 14px; color: #9FB0C2; }
 @media (max-width: 960px) { .lw-pie-cols { grid-template-columns: 1fr 1fr; } .lw-pie-marca { grid-column: 1 / -1; } }
 @media (max-width: 560px) { .lw-pie { padding-top: 48px; } .lw-pie-cols { grid-template-columns: 1fr; gap: 32px; } .lw-pie-base { margin-top: 40px; } }
+
+/* ===== Web · Cifras de prueba (Inicio, "Por qué Latinmanagers") y enlace dentro de una tarjeta lw-pil ===== */
+.lw-cifras { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 44px; }
+.lw-cifras > div { background: #fff; border: 1px solid var(--lw-linea); border-top: 4px solid var(--ltm-cel); border-radius: 22px; padding: 26px 24px; }
+.lw-cifras b { display: block; font-family: "Archivo", "Arial Narrow", sans-serif; font-stretch: 80%; font-weight: 800; font-size: clamp(52px, 6vw, 72px); line-height: 1; color: var(--ltm-piz); }
+.lw-p .lw-cifras p { margin-top: 10px; font-size: 16px; color: var(--lw-suave); }
+.lw-p .lw-pil > div .lw-ir { display: inline-block; margin-top: 12px; font-size: 15px; color: var(--ltm-piz) !important; }
+@media (max-width: 960px) { .lw-cifras { grid-template-columns: 1fr; } }
