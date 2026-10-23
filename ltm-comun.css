@@ -900,3 +900,7 @@ html.lw-sin-scroll, html.lw-sin-scroll body { overflow: hidden !important; }
 .lw-p .lw-demo-fin .lw-btn { height: 44px; padding: 0 18px; font-size: 15px; }
 .lw-p .lw-demo-fin .lw-demo-wa { display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 999px; background: var(--ltm-wa); color: var(--ltm-piz) !important; font-weight: 700; font-size: 15px; }
 @media (max-width: 560px) { .lw-p .lw-demo-msjs { max-height: 340px; } }
+/* Listas desplegables de la demo (tipo de negocio y tono) */
+.lw-p select.lw-select { -webkit-appearance: none; appearance: none; cursor: pointer; padding-right: 42px; background: var(--ltm-piz2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%2300AEEA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 16px center; }
+.lw-p select.lw-select option { background: #fff; color: var(--ltm-piz); }
+.lw-p .lw-demo-pasos { gap: 18px; }
