@@ -904,3 +904,10 @@ html.lw-sin-scroll, html.lw-sin-scroll body { overflow: hidden !important; }
 .lw-p select.lw-select { -webkit-appearance: none; appearance: none; cursor: pointer; padding-right: 42px; background: var(--ltm-piz2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%2300AEEA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 16px center; }
 .lw-p select.lw-select option { background: #fff; color: var(--ltm-piz); }
 .lw-p .lw-demo-pasos { gap: 18px; }
+/* Demo: aviso cuando falta completar los pasos */
+.lw-p .lw-demo-error { display: block; margin-top: 8px; font-size: 14px; color: #FFB4A8; }
+.lw-p .lw-demo-error:empty { display: none; }
+.lw-p .lw-input[aria-invalid="true"] { border-color: #FF8A75; box-shadow: 0 0 0 3px rgba(255,138,117,.2); }
+.lw-p .lw-demo-crear.is-llama { animation: lw-llama 1.2s ease 2; }
+@keyframes lw-llama { 0%, 100% { box-shadow: 0 0 0 0 rgba(0,174,234,.6); } 50% { box-shadow: 0 0 0 12px rgba(0,174,234,0); transform: scale(1.04); } }
+@media (prefers-reduced-motion: reduce) { .lw-p .lw-demo-crear.is-llama { animation: none; outline: 3px solid var(--ltm-cel); outline-offset: 3px; } }
