@@ -1112,3 +1112,10 @@ html.lw-sin-scroll, html.lw-sin-scroll body { overflow: hidden !important; }
 .hl-blog-post-home .pagination-button:is(:first-child, :last-child) { font-size: 0 !important; }
 .hl-blog-post-home .pagination-button:first-child::after { content: "← Anterior"; font-size: 15px; }
 .hl-blog-post-home .pagination-button:last-child::after { content: "Siguiente →"; font-size: 15px; }
+/* Citas del artículo: GHL pinta de blanco todo lo que hay dentro (blockquote * {background:#fff}) y pone su propio borde gris. */
+.c-blog-content .blog-html .lb-cuerpo blockquote { border-left: 4px solid var(--ltm-cel) !important; padding: 24px 28px !important; background: #EAF7FD !important; color: #2B333E !important; }
+.c-blog-content .blog-html .lb-cuerpo blockquote * { background: transparent !important; color: inherit !important; }
+.c-blog-content .blog-html .lb-cuerpo blockquote :is(strong, b) { color: var(--ltm-piz) !important; }
+.c-blog-content .blog-html .lb-cuerpo blockquote a { color: var(--ltm-cel-btn) !important; }
+.c-blog-content .blog-html .lb-cuerpo blockquote p { margin: 0 !important; }
+.c-blog-content .blog-html .lb-cuerpo blockquote p + p { margin-top: 10px !important; }
