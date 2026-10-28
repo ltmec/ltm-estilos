@@ -1069,3 +1069,37 @@ html.lw-sin-scroll, html.lw-sin-scroll body { overflow: hidden !important; }
   .c-blog-content .blog-html .lb-cuerpo { font-size: 18px !important; }
   .c-blog-content .blog-html .lb-cuerpo h2 { font-size: 30px !important; }
 }
+
+/* ===== Blog: elemento nativo "Blog post" de GHL (lista de la portada y de categorías). Cada artículo es .blog-post-wrapper-list dentro de .blog-post-wrapper;
+   el primero va destacado a todo el ancho. GHL pone Mayúscula En Cada Palabra y textos en inglés: se corrigen aquí. ===== */
+.c-blog-content .blog-content-title, .hl-blog-post-home, .hl-blog-post-home * { text-transform: none !important; }
+.hl-blog-post-home { padding: 72px 0 96px !important; margin: 0 !important; background: transparent !important; font-family: "Hanken Grotesk", system-ui, sans-serif !important; }
+.hl-blog-post-home .blog-post-wrapper { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 56px 32px; width: min(1180px, calc(100vw - 32px)) !important; margin: 0 auto; }
+.hl-blog-post-home .blog-post-wrapper-list { width: auto !important; }
+.hl-blog-post-home .blog-box { gap: 0; }
+.hl-blog-post-home .blog-image-standard-wrapper, .hl-blog-post-home .blog-image { width: 100% !important; height: auto !important; }
+.hl-blog-post-home .blog-image img { display: block; width: 100% !important; height: auto !important; aspect-ratio: 16/9; object-fit: cover !important; border-radius: 16px !important; transition: transform .3s; }
+.hl-blog-post-home .blog-box:hover .blog-image img { transform: translateY(-4px); }
+.hl-blog-post-home .standard-blog-content { padding: 20px 0 0 !important; }
+.hl-blog-post-home h2.blog-title { font-family: "Hanken Grotesk", system-ui, sans-serif !important; font-size: 21px !important; line-height: 1.25 !important; font-weight: 700 !important; color: var(--ltm-piz) !important; margin: 0 0 10px !important; text-wrap: balance; }
+.hl-blog-post-home h2.blog-title a { color: inherit !important; text-decoration: none !important; }
+.hl-blog-post-home .blog-box:hover h2.blog-title { color: var(--ltm-cel-btn) !important; }
+.hl-blog-post-home .blog-description { font-size: 16px !important; line-height: 1.5 !important; color: #5B6673 !important; margin: 10px 0 0 !important; }
+.hl-blog-post-home :is(.blog-author, .blog-publish-date) { font-size: 14px !important; color: #5B6673 !important; }
+.hl-blog-post-home .blog-author-image { width: 22px !important; height: 22px !important; border-radius: 50%; background: transparent !important; }
+.hl-blog-post-home .blog-button { margin-top: 14px; font-size: 0 !important; color: var(--ltm-cel-btn) !important; text-decoration: none !important; }
+.hl-blog-post-home .blog-button * { display: none !important; }
+.hl-blog-post-home .blog-button::after { content: "Leer artículo →"; font-size: 15px; font-weight: 700; }
+/* Primer artículo, destacado: imagen y texto lado a lado. */
+.hl-blog-post-home .blog-post-wrapper-list:first-child { grid-column: 1 / -1; padding-bottom: 56px; border-bottom: 1px solid #E3E9EF; }
+.hl-blog-post-home .blog-post-wrapper-list:first-child .blog-box { display: grid !important; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; }
+.hl-blog-post-home .blog-post-wrapper-list:first-child h2.blog-title { font-family: "Archivo", "Arial Narrow", sans-serif !important; font-stretch: 80%; font-weight: 800 !important; letter-spacing: -.02em; font-size: clamp(30px, 3.4vw, 46px) !important; line-height: 1 !important; margin-bottom: 16px !important; }
+.hl-blog-post-home .blog-post-wrapper-list:first-child .blog-description { font-size: 18px !important; }
+@media (max-width: 980px) {
+  .hl-blog-post-home .blog-post-wrapper { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hl-blog-post-home .blog-post-wrapper-list:first-child .blog-box { grid-template-columns: minmax(0, 1fr); gap: 0; }
+}
+@media (max-width: 640px) {
+  .hl-blog-post-home { padding: 40px 0 64px !important; }
+  .hl-blog-post-home .blog-post-wrapper { grid-template-columns: minmax(0, 1fr); gap: 44px; }
+}
