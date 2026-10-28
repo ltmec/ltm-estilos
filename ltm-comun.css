@@ -1103,3 +1103,12 @@ html.lw-sin-scroll, html.lw-sin-scroll body { overflow: hidden !important; }
   .hl-blog-post-home { padding: 40px 0 64px !important; }
   .hl-blog-post-home .blog-post-wrapper { grid-template-columns: minmax(0, 1fr); gap: 44px; }
 }
+/* Paginación de la lista del blog: en español, con el estilo de la web; si hay una sola página, no se muestra. */
+.hl-blog-post-home .pagination-container { display: flex; gap: 8px; font-family: "Hanken Grotesk", system-ui, sans-serif; }
+.hl-blog-post-home .pagination-container:has(> .pagination-button:nth-child(3):last-child) { display: none !important; }
+.hl-blog-post-home .pagination-button { min-width: 44px; height: 44px; padding: 0 16px !important; border-radius: 999px !important; border: 1px solid #E3E9EF !important; background: #fff !important; color: var(--ltm-piz) !important; font-size: 15px !important; font-weight: 600; }
+.hl-blog-post-home .pagination-button.active { background: var(--ltm-piz) !important; border-color: var(--ltm-piz) !important; color: #fff !important; }
+.hl-blog-post-home .pagination-button:disabled { opacity: .4; }
+.hl-blog-post-home .pagination-button:is(:first-child, :last-child) { font-size: 0 !important; }
+.hl-blog-post-home .pagination-button:first-child::after { content: "← Anterior"; font-size: 15px; }
+.hl-blog-post-home .pagination-button:last-child::after { content: "Siguiente →"; font-size: 15px; }
