@@ -1030,3 +1030,42 @@ html.lw-sin-scroll, html.lw-sin-scroll body { overflow: hidden !important; }
   .lb-cats { gap: 8px; }
   .lb-cats a { height: 36px; padding: 0 14px; font-size: 14px; }
 }
+
+/* ===== Blog: elemento nativo "Blog content" de GHL (página del artículo). GHL pone portada → título → categoría → fecha → texto → autor;
+   aquí se reordena a categoría → título → fecha → portada → texto, y se le gana a sus estilos base (.blog-html-container-single h2 {…}). ===== */
+.c-blog-content .blog-html-container-single { display: flex; flex-direction: column; max-width: 760px !important; margin: 0 auto; padding: 56px 0 24px; font-family: "Hanken Grotesk", system-ui, sans-serif !important; color: var(--ltm-piz); line-height: 1.55; overflow: visible; }
+.c-blog-content .blog-html-container-single > .meta-section-1:has(.blog-category) { order: 1; }
+.c-blog-content .blog-html-container-single > .blog-content-title { order: 2; }
+.c-blog-content .blog-html-container-single > .meta-section-1:has(.blog-date) { order: 3; }
+.c-blog-content .blog-html-container-single > .blog-cover-image-container { order: 4; }
+.c-blog-content .blog-html-container-single > :is(.blog-html, .blog-tags, .blog-author-details, .hl-blog-content-back-to-top-container, .blog-back-button) { order: 5; }
+.c-blog-content .blog-category a { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--ltm-cel-btn) !important; text-decoration: none !important; }
+.c-blog-content .blog-html-container-single h1.blog-content-title { font-family: "Archivo", "Arial Narrow", sans-serif !important; font-stretch: 80%; font-weight: 800; letter-spacing: -.02em; font-size: clamp(36px, 4.6vw, 58px) !important; line-height: 1 !important; text-wrap: balance; margin: 14px 0 16px !important; color: var(--ltm-piz); }
+.c-blog-content .blog-date { font-size: 15px; color: #5B6673; }
+.c-blog-content .blog-cover-image-container { margin: 32px 0 44px; }
+.c-blog-content .blog-cover-image-container img { display: block; width: 100% !important; aspect-ratio: 16/9; object-fit: cover !important; border-radius: 20px; }
+.c-blog-content .blog-html .lb-cuerpo { font-size: 19px !important; line-height: 1.7 !important; }
+.c-blog-content .blog-html .lb-cuerpo :is(p, li, td, th, blockquote, summary) { font-family: inherit !important; font-size: inherit; line-height: inherit; }
+.c-blog-content .blog-html .lb-cuerpo h2 { font-family: "Archivo", "Arial Narrow", sans-serif !important; font-stretch: 80%; font-weight: 800 !important; font-size: 36px !important; line-height: 1.05 !important; margin: 56px 0 0 !important; }
+.c-blog-content .blog-html .lb-cuerpo h3 { font-size: 23px !important; line-height: 1.3 !important; font-weight: 700 !important; margin: 36px 0 0 !important; }
+.c-blog-content .blog-html .lb-cuerpo :is(ul, ol) { list-style: none !important; padding-left: 0 !important; margin-left: 0 !important; }
+.c-blog-content .blog-html .lb-cuerpo li { list-style: none !important; }
+.c-blog-content .blog-html .lb-cuerpo li::marker { content: ""; }
+.c-blog-content .blog-html .lb-cuerpo blockquote { font-size: 18px; }
+.c-blog-content .blog-html .lb-cuerpo table { font-size: 16px; }
+/* Autor al final: tarjeta. "Back to top" se oculta y "Back to Blog" se muestra en español. */
+.c-blog-content .blog-author-details { margin-top: 56px; padding: 24px; border-radius: 18px; background: var(--lw-claro, #F4F8FB); }
+.c-blog-content .blog-author { text-decoration: none !important; }
+.c-blog-content .blog-author-image-post { width: 48px !important; height: 48px !important; border-radius: 50%; }
+.c-blog-content .blog-author-name { font-weight: 700; font-size: 17px; color: var(--ltm-piz); margin: 0 !important; }
+.c-blog-content .blog-author-description { font-size: 15px; color: #5B6673; margin: 0 !important; line-height: 1.5; }
+.c-blog-content .hl-blog-content-back-to-top-container { display: none !important; }
+.c-blog-content .blog-back-button { display: inline-flex !important; align-items: center; gap: 8px; margin-top: 28px; font-weight: 600; color: var(--ltm-cel-btn) !important; text-decoration: none !important; }
+.c-blog-content .blog-back-button span { font-size: 0 !important; }
+.c-blog-content .blog-back-button span::after { content: "← Volver al blog"; font-size: 16px; }
+.c-blog-content .blog-back-button .blog-left-arrow { display: none !important; }
+@media (max-width: 640px) {
+  .c-blog-content .blog-html-container-single { padding-top: 32px; }
+  .c-blog-content .blog-html .lb-cuerpo { font-size: 18px !important; }
+  .c-blog-content .blog-html .lb-cuerpo h2 { font-size: 30px !important; }
+}
