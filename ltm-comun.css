@@ -932,3 +932,4 @@ html.lw-sin-scroll, html.lw-sin-scroll body { overflow: hidden !important; }
 .lw-p .lw-gracias-caso .lw-mas { text-align: left; margin-top: 24px; }
 /* Asteriscos de campos obligatorios: GHL les pone la fuente del formulario (Inter/Poppins) y eso descarga una fuente extra solo por "*". */
 .ltm-form label span, .ltm-form .field-label span, .ltm-form-col:is(#ltm-x, .c-column) .c-form :is(label, .field-label, .label-alignment) span { font-family: inherit !important; }
+.ltm-form .terms-text-container *, .ltm-form-col:is(#ltm-x, .c-column) .c-form .terms-text-container * { font-family: "Hanken Grotesk", system-ui, sans-serif !important; }
